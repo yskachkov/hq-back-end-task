@@ -18,43 +18,40 @@ Good luck!
 
 The code in this repo is not working properly. 
 
-The script `main.ts` is trying to write "a lot" of data into a simulation of a key-value database (`Datable.ts`). As Databases usually do - our database has small latency - between 0 to 100 ms per operation. 
-In order to allow faster the process of the messages our `main.ts` script puts everything in a queue (see the `Queue.ts` file) and launches 3 "workers" (see `Worker.ts`), that works in parallel, reading messages from the queue and inserts it into the "Database". Each worker should "confirm" to the queue that the message was proceeded, so the Queue would know the message can be deleted. The script wait for 10 seconds (enough time for all the workers to complete the work), prints the state of hte queue and the DB state, and exits. 
+The script `main.ts` is trying to write "a lot" of data into a simulation of a key-value database ( implemented in `Datable.ts`). As Databases usually do - our database has small latency - between 0 to 100 ms per operation. 
+In order to allow faster process of the messages our `main.ts` script puts all the operations in a queue (see the `Queue.ts` file). Than it launches a random number (between 3 to 6) of "workers" (see `Worker.ts`), that works asynchronously in parallel, reading messages from the queue and commit the operation to the "Database". Each worker should "confirm" to the queue that the message was proceeded, so the message would be deleted.
+The script wait for 10 seconds (enough time for all the workers to complete the work), prints the state of hte queue and the DB state, and exits. 
 
-However! the results are wrong :(
+However! <br />
+the results are wrong :( <br /> 
 We set all the initial values to 50, and than we add all numbers between 1 to 9 for each item. therefore the correct results so the correct output should be:
 ```bash
 # > ts-node main.ts
-Queue size:  33
-started worker 0
-started worker 1
-started worker 2
+Number of items:3
+Number of workers:5
 Queue size:  0
 DB state:
  {
-    "A": 95,
-    "B": 95,
-    "C": 95
+    "item2": 95,
+    "item0": 95,
+    "item1": 95
 }
 ```
 
 
-However, running it you would see something like hte next output:
+While running the script would look like this (different values would be shown on each run):
 ```bash
 # > ts-node main.ts
-Queue size:  33
-started worker 0
-started worker 1
-started worker 2
+Number of items:3
+Number of workers:5
 Queue size:  0
 DB state:
  {
-    "A": 83,
-    "C": 91,
-    "B": 26
+    "item2": 74,
+    "item0": 74,
+    "item1": 15
 }
 ```
-Not only that, it would even return different results at each run. 
 
 Please assist our dev team to implement a valid version of `Queue.ts`! 
 
