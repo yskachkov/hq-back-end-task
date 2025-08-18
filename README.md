@@ -65,7 +65,7 @@ To submit your solution, please follow these guidelines:
 2. **Make changes** either as a PR on a separate branch or directly on main
 3. **Document your solution and thinking process** in the README.md or create a new MD file
 4. **Don't change the output format** as it makes review more difficult
-5. **Don't overengineer the solution** - there's no need to change the structure of the whole codebase
+5. **Don't overengineer the solution** - there's no need to change the structure of the whole codebase - `Queue.ts` is enough. But drop your suggestions in comments if you'd change anything else.
 6. **Send the link to your repository** to the provided contact.
 
 We'll evaluate your submission based on correctness, code quality, and your understanding of the concurrency problem.
