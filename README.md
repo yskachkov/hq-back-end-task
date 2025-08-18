@@ -56,3 +56,18 @@ DB state:
 Please assist our dev team to implement a valid version of `Queue.ts`! 
 
 *note*: Any implementation that would effectively not allow any parallel work between the workers would be rejected.
+
+## How to submit
+
+To submit your solution, please follow these guidelines:
+
+1. **Clone this repository to your own GitHub account** and implement your solution
+2. **Make changes** either as a PR on a separate branch or directly on main
+3. **Document your solution and thinking process** in the README.md or create a new MD file
+4. **Don't change the output format** as it makes review more difficult
+5. **Don't overengineer the solution** - there's no need to change the structure of the whole codebase
+6. **Send the link to your repository** to the provided contact.
+
+We'll evaluate your submission based on correctness, code quality, and your understanding of the concurrency problem.
+
+**NOTE:** Please do not submit PRs to this repo or fork it directly, as then your submissions will be easily visible to other candidates.
