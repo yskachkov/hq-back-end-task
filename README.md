@@ -1,19 +1,3 @@
-# senior-be-developer-task
-
-## Introduction 
-Hello! If you are viewing this repository you are probably a candidate for HyperGuest senior backend developer, congrats!
-
-Before we begin, a few important notes please!
-* Any AI tool is forbidden during this task. We already know Github copilot is a great tool, we don't need to test it :) 
-* This task is designated to test your problem-solving skills, still, code quality do matters! submit a code you would like to read as well
-* At your sumption please include the next things :
-    -  your implementation of `Queues.ts`. Any other files are not allowed to be changed during this test.
-    -  write a clear explanation of your implementation.
-    -  suggest improvements! the code in this repository is not perfect, what would you do differently?
-* Do not PR to this repo! if you would, all of your opponents would copy your answers ;)
-
-Good luck!
-
 ## Task description
 
 The code in this repo is not working properly. 
